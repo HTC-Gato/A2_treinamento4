@@ -1,0 +1,17 @@
+private LocalDate dataCadastro;
+
+public Livro(String titulo, String autor) {
+    this.titulo = titulo;
+    this.autor = autor;
+    this.dataCadastro = LocalDate.now();
+}
+
+Ao listar:
+
+DateTimeFormatter formato =
+        DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+System.out.println(
+    "Data de cadastro: " +
+    dataCadastro.format(formato)
+);
